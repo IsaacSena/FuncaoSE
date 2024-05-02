@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+</head>
+<body>
+
+    <p>Nome da primeira pessoa: <span id="p1"></span></p>
+    <p>idade: <span id="n1"></span></p>
+    <p>Nome da segunda pessoa: <span id="p2"></span></p>
+    <p>idade: <span id="n2"></span></p>
+    <p>Quem delas é a mais nova?: <span id="maisnova"></span></p>
+
+    <script>
+
+        let primeirapessoa = prompt("Digite o nome da primeira pessoa");
+        let anoprimeira = Number(prompt("Digite o ano de nascimento da primeira pessoa"));
+        let segundapessoa = prompt("Digite o nome da segunda pessoa");
+        let anosegunda = Number(prompt("Digite o ano de nascimento da segunda pessoa"));
+        let resultado;
+        
+        let idadePrimeira = 2024 - anoprimeira;
+        let idadeSegunda = 2024 - anosegunda;
+
+    
+        if (idadePrimeira < idadeSegunda) {
+            resultado = primeirapessoa + " é a mais nova";
+        } else if (idadePrimeira > idadeSegunda) {
+            resultado = segundapessoa + " é o(a) mais nova";
+        } else {
+            resultado = "Ambas têm a mesma idade";
+}
+
+
+      
+        document.getElementById("p1").innerHTML = primeirapessoa;
+        document.getElementById("n1").innerHTML = idadePrimeira;
+        document.getElementById("p2").innerHTML = segundapessoa;
+        document.getElementById("n2").innerHTML = idadeSegunda;
+        document.getElementById("maisnova").innerHTML = resultado;
+    </script>
+</body>
+</html>

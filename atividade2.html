@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+<body>
+    <h1>Nome e peso</h1>
+
+    <p>Nome da pessoa com maior peso:<span id="nmpeso"></span></p>
+    <p>Peso:Kg <span id="mpeso"></span></p>
+    
+    <script>
+
+        let nome1 = prompt("Digite o nome da primeira pessoa");
+        let peso1 = Number(prompt("Digite o peso da primeira pessoa"));
+        let nome2 = prompt("Digite o nome da segunda pessoa");
+        let peso2 = Number(prompt("Digite o peso da segunda pessoa"));
+        let maiorpeso;
+        let nomeobesa;
+
+    
+        if (peso1 > peso2) {
+            maiorpeso = peso1;
+            nomeobesa = nome1;
+        } else if (peso2 > peso1) {
+            maiorpeso = peso2;
+            nomeobesa = nome2;
+        } else {
+            nomeobesa = "Ambas têm o mesmo peso";
+        }
+
+        document.getElementById("nmpeso").innerHTML = nomeobesa;
+        document.getElementById("mpeso").innerHTML = maiorpeso;
+  
+    </script>
+    
+</body>
+</html>

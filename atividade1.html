@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+</head>
+<body>
+    <h1>Qual é o menor e qual é o maior</h1>
+    <p>Primeiro Numero: <span id="n1"></span></p>
+    <p>Segundo Numero: <span id="n2"></span></p>
+    <p>Quem é Maior: <span id="maior"></span></p>
+    <p>Quem é menor: <span id="menor"></span></p>
+
+    <script>
+        let numero1 = Number(prompt("Digite o primeiro numero"))
+        let numero2 = Number(prompt("Digite o segundo numero"))
+        let maior
+        let menor
+
+        if (numero1 > numero2){
+            maior = numero1
+        }
+
+        if(numero1 < numero2){
+            maior = numero2
+        }
+        
+        if(numero2 > numero1){
+            menor = numero1
+        }
+        
+        if(numero2 < numero1){
+            menor = numero2
+        }
+
+
+        document.getElementById("n1").innerHTML = numero1;
+        document.getElementById("n2").innerHTML = numero2;
+        document.getElementById("maior").innerHTML = maior;
+        document.getElementById("menor").innerHTML = menor;
+
+    </script>
+    
+</body>
+</html>
